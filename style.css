@@ -24,8 +24,8 @@ body {
     padding: 2rem 1rem;
     min-height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center;
+    justify-content: center; */
 }
 
 .main-container {
@@ -62,7 +62,7 @@ body {
     box-shadow: var(--shadow-medium);
     position: relative;
     overflow: hidden;
-    text-align: center;
+    /* text-align: center; */
     border: 1px solid rgba(0, 0, 0, 0.03);
 }
 
