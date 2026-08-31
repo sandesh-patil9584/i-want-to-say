@@ -1,0 +1,120 @@
+/* Reset & Base Styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #74b9ff; /* Soft sincere blue */
+    --accent-color: #a29bfe;  /* Soft lavender */
+    --text-color: #2d3436;
+    --muted-color: #636e72;
+    --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* Calming gradient */
+    --card-bg: #ffffff;
+    --shadow-soft: 0 10px 30px rgba(116, 185, 255, 0.06);
+    --shadow-medium: 0 15px 35px rgba(0, 0, 0, 0.04);
+}
+
+body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: var(--bg-gradient);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 2rem 1rem;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Apology Header */
+.apology-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.apology-emoji {
+    font-size: 4.5rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    animation: gentle-pulse 2s infinite alternate;
+}
+
+.apology-title {
+    font-size: 2.5rem;
+    color: #2d3436;
+    font-weight: 700;
+    margin-top: 0.25rem;
+}
+
+/* Content Card */
+.content-card {
+    background: var(--card-bg);
+    border-radius: 24px;
+    padding: 2.5rem;
+    box-shadow: var(--shadow-medium);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.card-accent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+}
+
+.apology-message {
+    font-size: 1.15rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.user-content {
+    font-size: 1rem;
+    color: var(--muted-color);
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #fafbfc;
+    border-radius: 12px;
+    border: 1px dashed #dfe6e9;
+}
+
+.signature {
+    font-style: italic;
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+/* Animations */
+@keyframes gentle-pulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.05); }
+}
+
+/* Responsive Breakpoints */
+@media (min-width: 600px) {
+    body {
+        padding: 3rem 2rem;
+    }
+    
+    .apology-title {
+        font-size: 3rem;
+    }
+    
+    .content-card {
+        padding: 3rem;
+    }
+}
